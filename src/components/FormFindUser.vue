@@ -1,7 +1,7 @@
 <template>
   <form @submit="findUser">
-    <label for="name">Find</label>
-    <input type="text" v-model="username" name="username" placeholder="Find user" />
+    <label for="name">Find GitHub user public repositories</label><br />
+    <input type="text" v-model="username" name="username" placeholder="Find user" /><br />
     <input type="submit" value="Search" />
   </form>
   <!-- TODO - new component -->
@@ -13,8 +13,12 @@
       </li>
     </ul>
   </div>
-  <div v-else-if="isSubmitted && !projectsList.length">User {{ submittedUsername }}
-    doesn't exist</div>
+  <div v-else-if="isSubmitted && projectsList.message === 'Not Found'">
+    User "{{ submittedUsername }}" doesn't exist
+  </div>
+  <div v-else-if="isSubmitted && !projectsList.length">
+    User "{{ submittedUsername }}" doesn't have any public repositories
+  </div>
   <!--  -->
 </template>
 
@@ -47,4 +51,19 @@ export default {
 </script>
 
 <style scoped>
+input[type="text"] {
+  width: 40%;
+  padding: .6em;
+  margin: .3em;
+}
+
+input[type="submit"] {
+  padding: .6em;
+  margin: .3em;
+
+}
+
+ul {
+  list-style-type: none;
+}
 </style>
