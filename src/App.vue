@@ -1,19 +1,14 @@
 <template>
-  <FormFindUser />
-  <hr />
-  <!-- STARTER TEMPLATE -->
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <FormFindUser />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import FormFindUser from "./components/FormFindUser.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
     FormFindUser,
   },
 };
