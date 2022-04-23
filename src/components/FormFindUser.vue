@@ -7,8 +7,8 @@
   <!-- TODO - new component -->
   <div v-if="projectsList.length">
     <h2>Repositories list</h2>
-    <ul v-for="project in projectsList" :key="project.id">
-      <li>
+    <ul>
+      <li v-for="project in projectsList" :key="project.id">
         <p>{{ project.name }}</p>
       </li>
     </ul>
