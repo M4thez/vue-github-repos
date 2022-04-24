@@ -2,7 +2,7 @@
   <div v-if="repos.length">
     <h2>Repositories list</h2>
     <ul>
-      <li v-for="repo in repos" :key="repo.id">
+      <li v-for="repo in repos" :key="repo.id" class="repo-item">
         <p>{{ repo.name }}</p>
       </li>
     </ul>
@@ -29,6 +29,14 @@ export default {
 <style scoped>
 ul {
   list-style-type: none;
-  padding: none;
+  padding: 0;
+  margin: 0;
+}
+
+.repo-item {
+  text-align: center;
+  margin: .6em 0 .6em;
+  padding: .3em;
+  background-color: aqua;
 }
 </style>
