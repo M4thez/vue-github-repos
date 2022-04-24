@@ -1,35 +1,34 @@
 <template>
   <form @submit="findUser">
     <label for="name">Find GitHub user public repositories</label><br />
-    <input type="text" v-model="username" name="username" placeholder="Find user" /><br />
+    <input type="text" v-model="user" name="user" placeholder="Find user" /><br />
     <input type="submit" value="Search" />
   </form>
-  <ListRepos :repos="reposList" :is-submitted="isSubmitted" :submitted-username="submittedUsername" />
+  <ListRepos :repos="repos" :is-submitted="isSubmitted" :submitted-user="submittedUser" />
 </template>
 
 <script>
 import ListRepos from "./ListRepos.vue";
 export default {
-  name: "FormFindUser",
   components: {
     ListRepos,
   },
   data() {
     return {
-      username: "",
-      reposList: [],
+      user: "",
+      repos: [],
       isSubmitted: false,
-      submittedUsername: "",
+      submittedUser: "",
     };
   },
   methods: {
     findUser(e) {
       e.preventDefault();
-      this.submittedUsername = this.username;
-      fetch(`https://api.github.com/users/${this.submittedUsername}/repos`)
+      this.submittedUser = this.user;
+      fetch(`https://api.github.com/users/${this.submittedUser}/repos`)
         .then(response => response.json())
         .then(data => {
-          this.reposList = data;
+          this.repos = data;
           this.isSubmitted = true;
         })
         .catch(error => console.log(error.message));
