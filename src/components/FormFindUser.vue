@@ -4,47 +4,35 @@
     <input type="text" v-model="username" name="username" placeholder="Find user" /><br />
     <input type="submit" value="Search" />
   </form>
-  <!-- TODO - new component -->
-  <div v-if="projectsList.length">
-    <h2>Repositories list</h2>
-    <ul>
-      <li v-for="project in projectsList" :key="project.id">
-        <p>{{ project.name }}</p>
-      </li>
-    </ul>
-  </div>
-  <div v-else-if="isSubmitted && projectsList.message === 'Not Found'">
-    User "{{ submittedUsername }}" doesn't exist
-  </div>
-  <div v-else-if="isSubmitted && !projectsList.length">
-    User "{{ submittedUsername }}" doesn't have any public repositories
-  </div>
-  <!--  -->
+  <ListRepos :repos="reposList" :is-submitted="isSubmitted" :submitted-username="submittedUsername" />
 </template>
 
 <script>
+import ListRepos from "./ListRepos.vue";
 export default {
   name: "FormFindUser",
+  components: {
+    ListRepos,
+  },
   data() {
     return {
       username: "",
-      projectsList: [],
+      reposList: [],
       isSubmitted: false,
       submittedUsername: "",
     };
   },
   methods: {
     findUser(e) {
-      e.preventDefault()
-
-      this.submittedUsername = this.username
+      e.preventDefault();
+      this.submittedUsername = this.username;
       fetch(`https://api.github.com/users/${this.submittedUsername}/repos`)
         .then(response => response.json())
         .then(data => {
-          this.projectsList = data
-          this.isSubmitted = true
+          this.reposList = data;
+          this.isSubmitted = true;
         })
-        .catch(error => console.log(error.message))
+        .catch(error => console.log(error.message));
     }
   },
 };
@@ -61,9 +49,5 @@ input[type="submit"] {
   padding: .6em;
   margin: .3em;
 
-}
-
-ul {
-  list-style-type: none;
 }
 </style>
