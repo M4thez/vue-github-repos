@@ -33,12 +33,13 @@ body {
 }
 
 .button {
+  font-size: .9em;
   background-color: #555555;
   color: white;
   border: 2px solid #555555;
   border-radius: .2em;
-  padding: .8em 1.4em;
-  margin: .8em 0 .4em;
+  padding: .7em 1.2em;
+  margin: .7em 0 .5em;
   transition-duration: .4s;
 }
 

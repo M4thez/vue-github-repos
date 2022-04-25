@@ -6,7 +6,7 @@
       <ul class="repo-list">
         <li v-for="repo in repos" :key="repo.id">
           <p><a :href="repo.html_url">{{ repo.name }}</a></p>
-          <button @click="findLanguages(repo)" class="button">Expand</button>
+          <button @click="findLanguages(repo)" class="button">Details</button>
           <!-- Language list -->
           <Transition name="fade">
             <div v-if="selectedRepo === repo.name">
