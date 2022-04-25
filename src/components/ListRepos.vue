@@ -16,7 +16,7 @@
                   {{ lang }} - {{ value }} Bytes
                 </li>
               </ul>
-              <p v-else>No data on languages</p>
+              <p v-else>No data on languages in this repo</p>
             </div>
           </Transition>
         </li>
