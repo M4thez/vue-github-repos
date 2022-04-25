@@ -40,6 +40,7 @@ body {
   border-radius: .2em;
   padding: .7em 1.2em;
   margin: .7em 0 .5em;
+  cursor: pointer;
   transition-duration: .4s;
 }
 
