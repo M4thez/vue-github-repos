@@ -3,6 +3,10 @@
 My email in recruitment process: mateuszboboryko@gmail.com
 --
 
+## Zadanie nr 2. Frontend Software Engineer
+
+
+
 ## Project setup
 
 ```
@@ -21,12 +25,3 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
