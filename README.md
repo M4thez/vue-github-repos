@@ -7,6 +7,7 @@ My email in recruitment process: mateuszboboryko@gmail.com
 
 ### Założenia i ograniczenia
 
+- Użyłem frameworka Vue do wykonania tego zadania oraz Vue CLI do jego konfiguracji 
 - Aplikacja pozwala wyszukać jedynie jednego konkretnego użytkownika GitHub naraz
 - Aplikacja wyświetla języki użyte w danym repozytorium tylko dla jednego repozytorium w danym momencie
 - Aplikacja wyświetla tylko dane, które zostały wymienione w zadaniu
