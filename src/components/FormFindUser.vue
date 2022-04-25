@@ -1,8 +1,8 @@
 <template>
   <form @submit="findUser">
     <label for="name">Find GitHub user public repositories</label><br />
-    <input type="text" v-model="user" name="user" placeholder="Find user" /><br />
-    <input type="submit" value="Search" />
+    <input type="text" v-model="user" name="user" placeholder="Find a user" /><br />
+    <input type="submit" value="Search" class="button" />
   </form>
   <ListRepos :repos="repos" :is-submitted="isSubmitted" :submitted-user="submittedUser" />
 </template>
@@ -41,12 +41,13 @@ export default {
 input[type="text"] {
   width: 40%;
   padding: .6em;
-  margin: .3em;
+  margin: .6em 1em;
+  font-size: 1.2em;
 }
 
-input[type="submit"] {
-  padding: .6em;
-  margin: .3em;
-
+@media (max-width:600px) {
+  input[type="text"] {
+    width: 70%;
+  }
 }
 </style>

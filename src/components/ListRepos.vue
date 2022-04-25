@@ -1,11 +1,13 @@
 <template>
+  <!-- Repositories list -->
   <Transition name="fade">
     <div v-if="repos.length">
       <h2>{{ submittedUser }}'s public repositories list</h2>
       <ul class="repo-list">
         <li v-for="repo in repos" :key="repo.id">
-          <p>{{ repo.name }}</p>
-          <button @click="findLanguages(repo)">Expand</button>
+          <p><a :href="repo.html_url">{{ repo.name }}</a></p>
+          <button @click="findLanguages(repo)" class="button">Expand</button>
+          <!-- Language list -->
           <Transition name="fade">
             <div v-if="selectedRepo === repo.name">
               <h3>Languages used</h3>
@@ -59,37 +61,69 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 1.5em;
+  padding: .2em .6em;
+  background-color: #f4f4f4;
+  border-radius: .2em;
+}
+
+a:hover {
+  color: #577797;
+}
+
+/* Repositories list */
 .repo-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: inline-block;
+  width: 40%;
 }
 
 .repo-list li {
-  margin: .6em 0 .6em;
+  margin: .6em 0 1em;
   padding: .2em 1em .8em;
   background-color: white;
-  border-radius: .6em;
-  /* TODO - add width */
+  border-radius: .3em;
 }
 
+/* Languages list */
 .lang-list {
   list-style-type: disc;
   text-align: left;
+  display: inline-block;
 }
 
 /* Transition animation */
-.fade-enter-active {
-  transition: all 0.4s ease-in;
-}
-
+.fade-enter-active,
 .fade-leave-active {
-  transition: all 0.6s ease-out;
+  transition: all .8s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+  transform: translateY(20%);
+}
+
+@media (max-width:1200px) {
+  .repo-list {
+    width: 60%;
+  }
+}
+
+@media (max-width:600px) {
+  .repo-list {
+    width: 80%;
+  }
+}
+
+@media (max-width:480px) {
+  .repo-list {
+    width: 90%;
+  }
 }
 </style>
