@@ -13,7 +13,8 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:M4thez/allegro-summer-experience-2022.git main:gh-pages
+# default branch name is 'main' yet for some reason there needs to be 'master'
+git push -f git@github.com:M4thez/allegro-summer-experience-2022.git master:gh-pages
 
 # navigate into the previous working directory
 cd -
