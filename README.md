@@ -5,7 +5,9 @@ My email in recruitment process: mateuszboboryko@gmail.com
 
 ## Zadanie nr 2. Frontend Software Engineer
 
+### Założenia
 
+### Ograniczenia
 
 ## Project setup
 
