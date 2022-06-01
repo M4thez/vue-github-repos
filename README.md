@@ -13,7 +13,7 @@
 - Zapytania do GitHubowego API są wysyłane w trybie nieautoryzowanym przez co limit zapytań jest ściślejszy, aplikacja nie sprawdza czy przekroczono limit zapytań
 - Całość aplikacji jest w języku angielskim, języka polskiego użyłem tylko w tym fragmencie README
 
-## Availability
+### Availability
 
 Live site is available at: 
 
