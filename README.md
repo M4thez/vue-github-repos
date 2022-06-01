@@ -1,9 +1,6 @@
 # allegro-summer-experience-2022
 
-My email in recruitment process: mateuszboboryko@gmail.com
---
-
-## Zadanie nr 2. Frontend Software Engineer
+## Zadanie - Frontend Software Engineer Intern
 
 ### Założenia i ograniczenia
 
@@ -18,11 +15,11 @@ My email in recruitment process: mateuszboboryko@gmail.com
 
 ## Availability
 
-Compiled and minified code is available at: 
+Live site is available at: 
 
 https://m4thez.github.io/allegro-summer-experience-2022/
 
-## Project setup
+### Project setup
 
 ```
 npm install
