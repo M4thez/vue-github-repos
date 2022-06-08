@@ -1,4 +1,4 @@
-# allegro-summer-experience-2022
+# vue-github-repos
 
 ## Zadanie - Frontend Software Engineer Intern
 
@@ -17,7 +17,7 @@
 
 Live site is available at: 
 
-https://m4thez.github.io/allegro-summer-experience-2022/
+https://m4thez.github.io/vue-github-repos/
 
 ### Project setup
 
