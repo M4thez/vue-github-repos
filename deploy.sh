@@ -14,7 +14,7 @@ git add -A
 git commit -m 'deploy'
 
 # default branch name is 'main' yet for some reason there needs to be 'master'
-git push -f git@github.com:M4thez/allegro-summer-experience-2022.git master:gh-pages
+git push -f git@github.com:M4thez/vue-github-repos.git master:gh-pages
 
 # navigate into the previous working directory
 cd -
